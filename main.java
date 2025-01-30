@@ -11,6 +11,12 @@ class SortOfArrays {
             list.add(digit);
         }
 
+        for (int i = list.size() - 1; i >= 0; i--) {
+            if (list.get(i) == 0) {
+                list.remove(i);
+            }
+        }
+
         int arrayLength = list.size();
 
         for (int i = 0; i < arrayLength - 1; i++) {
@@ -32,6 +38,6 @@ public class main {
     public static void main(String[] args) {
         SortOfArrays sort = new SortOfArrays();
 
-        sort.Sorting(new int[] { 9, 3, 3, 5, 6 }, new int[] { 4, 2, 5, 3, 3 });
+        sort.Sorting(new int[] { 9, 3, 3, 5, 6, 0, 0 }, new int[] { 4, 2, 5, 3, 3, 0, 0 });
     }
 }
